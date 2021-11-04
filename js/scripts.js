@@ -4,6 +4,12 @@ let pokemonList = [
   {name: 'Magnemite', height: '0.3', type: ['electric', 'steel']}
 ];
 
+//Write's pokemon's name and height in DOM
 for (let i=0; i < pokemonList.length; i++) {
-  document.write(pokemonList[i].name + ': ' + '(height: ' + pokemonList[i].height + ')');
+  document.write('<br>' + pokemonList[i].name + ': ' + '(height: ' + pokemonList[i].height + ')');
+
+  if (pokemonList[i].height > 5){
+    document.write(' - Wow, that\'s big!');
+  }
+
 }
