@@ -5,11 +5,10 @@ let pokemonList = [
 ];
 
 //Write's pokemon's name and height in DOM
-for (let i=0; i < pokemonList.length; i++) {
-  document.write('<br>' + pokemonList[i].name + ': ' + '(height: ' + pokemonList[i].height + ')');
+pokemonList.forEach(function(pokemon) {
+  document.write('<br>' + pokemon.name + ': ' + '(height: ' + pokemon.height + ')');
 
-  if (pokemonList[i].height > 5){
+  if (pokemon.height > 5){
     document.write(' - Wow, that\'s big!');
   }
-
-}
+});
