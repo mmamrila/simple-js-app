@@ -39,3 +39,9 @@
   color: #0086ff;
   border: 2px solid #0086ff;
 }
+
+@media (max-width: 1024px) {
+  body {
+    max-width: 100%;
+  }
+}
