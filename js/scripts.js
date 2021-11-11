@@ -21,7 +21,14 @@ let pokemonRepository = (function () {
 
 //Write's pokemon's name and height in DOM
 pokemonRepository.getAll().forEach(function(pokemon) {
-  document.write('<br>' + pokemon.name + ': ' + '(height: ' + pokemon.height + ')');
+  let pokemonList = document.querySelector('.pokemon-list');
+  let listPokemon = document.createElement('li');
+  let button = document.createElement('button');
+  button.innerText = pokemon.name;
+  button.classList.add('name-button');
+  listPokemon.appendChild(button);
+  pokemonList.appendChild(listPokemon);
+
 
   if (pokemon.height > 5){
     document.write(' - Wow, that\'s big!');
