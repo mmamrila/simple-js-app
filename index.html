@@ -7,10 +7,19 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <header class='header'>
-        <img src="img/pokelist_logo.svg" alt="Pokelist  Logo">
-    </header>
-    <ul class='pokemon-list'></ul>
+    <section class="modal-container">
+      <header class='header'>
+          <img src="img/pokelist_logo.svg" alt="Pokelist  Logo">
+      </header>
+      <ul class='pokemon-list'></ul>
+      <div id="modal" class="modal">
+        <span id="closeButton">X</span>
+        <h2 id="pokemonName">Pokemon name here</h2>
+        <img id="pokemonImg" src="" alt="">
+        <p><strong>Height</strong>: <span id="pokemonHeight"></span> ft</p>
+      </div>
+    </section>
+
     <script src="js/promise-polyfill.js"></script>
     <script src="js/fetch-polyfill.js"></script>
     <script src="js/scripts.js"></script>

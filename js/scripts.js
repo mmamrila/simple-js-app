@@ -63,9 +63,28 @@ let pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      console.log(pokemon);
+      document.querySelector('#pokemonName').innerHTML = pokemon.name
+      document.querySelector('#pokemonHeight').innerHTML = pokemon.height
+      document.querySelector('#pokemonImg').setAttribute("src", pokemon.imageUrl)
+      modal.style.display = 'block'
     });
   }
+
+  closeButton.addEventListener('click', function(event) {
+    modal.style.display = 'none'
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display == 'block') {
+      modal.style.display = 'none';
+    }
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target !== modal && modal.style.display == 'block') {
+      modal.style.display = 'none';
+    }
+  });
 
   return {
     add: add,
