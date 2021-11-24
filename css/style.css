@@ -47,22 +47,34 @@
 
 .modal-container {
   position: relative;
+  max-height: 90vh;
+  overflow: scroll;
 }
 
 .modal {
   border: 2px solid #0086ff;
-  border-radius: 4px;
-  position: absolute;
+  border-radius: 10px;
+  position: fixed;
   top: 30px;
   left: 33%;
   padding: 25px 100px;
   max-width: 600px;
   width: 350px;
   box-sizing: border-box;
+  background: #dce6ea;
+  display: none;
 }
 
 @media (max-width: 1024px) {
   body {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 90%;
+    max-width: 90%;
+    left: 5%;
   }
 }
