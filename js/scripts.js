@@ -20,10 +20,10 @@ let pokemonRepository = (function () {
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('.pokemon-list');
     let listPokemon = document.createElement('li');
-    let button = document.createElement('button');
+    let button-primary = document.createElement('button');
     button.innerText = pokemon.name;
-    button.classList.add('name-button');
-    listPokemon.appendChild(button);
+    button.classList.add('button-primary');
+    listPokemon.appendChild(button-primary);
     pokemonList.appendChild(listPokemon);
 
     button.addEventListener('click', function(event) {
@@ -103,3 +103,45 @@ let pokemonRepository = (function () {
 
     });
 });
+
+// show modal content
+function showModal(item) {
+  let modalBody = $('.modal-body');
+  let modalTitle = $('.modal-title');
+  let modalHeader = $('.modal-header');
+  let $modalContainer = $('#modal-container');
+
+  //clear existing content from modal
+  modalHeader.empty();
+  modalTitle.empty();
+  modalBody.empty();
+
+  //create element for name in modal content
+  let nameElement = $('<h1>' + item.name + '</h1>');
+
+  //create img in modal content
+  let imageElementFront = $('<img class="modal-img" style="width:50%">');
+  imageElementFront.attr("src", item.imageUrlFront);
+  let imageElementBack = $('<img class="modal-img" style="width:50%">');
+  imageElementBack.attr("src", item.imageUrlBack);
+
+  //create element for height in modal content
+  let heightElement = $("<p>" + "Height: " + item.height + "</p>");
+
+  //create element for weight in modal content
+  let weightElement = $("<p>" + "Weight: ") + item.wight + "</p>");
+
+  // create element for types in modal content
+  let typesElement = $("<p>" + "Types: " + item.types + "</p>");
+
+  // create element for abilities in modal content
+  let abilitiesElement = $("<p>" + "Abilities: " + item.abilities + "</p>");
+
+  modalTitle.append(nameElement);
+  modalBody.append(imageElementFront);
+  modalBody.append(imageElementBack);
+  modalBody.append(heightElement);
+  modalBody.append(weightElement);
+  modalBody.append(typesElement);
+  modalBody.append(abilitiesElement);
+}
