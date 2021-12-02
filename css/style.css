@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.pokemon-list li::before {
+/* .pokemon-list li::before {
   content: url('../img/pokemonlistbuttonlogo.svg');
   position: relative;
   display: inline-block;
@@ -18,10 +18,10 @@
   height: 30px;
   top: 10px;
   margin-right: 10px;
-}
+} */
 
 
-.name-button {
+/* .button {
   background-color: #0086ff;
   color: #dce6ea;
   border-radius: 5px;
@@ -35,17 +35,17 @@
   text-transform: capitalize;
 }
 
-.name-button:hover {
+.button:hover {
   background-color: #dce6ea;
   color: #0086ff;
   border: 2px solid #0086ff;
-}
+} */
 
-#pokemonName {
+/* #pokemonName {
   text-transform: capitalize;
-}
+} */
 
-.modal-container {
+/* .modal-container {
   position: relative;
   max-height: 90vh;
   overflow: scroll;
@@ -77,4 +77,4 @@
     max-width: 90%;
     left: 5%;
   }
-} */
+} */ */
