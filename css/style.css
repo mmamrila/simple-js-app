@@ -7,19 +7,20 @@
 }
 
 .modal-content {
-  border:15px solid;
-  border-color: #FFC249;
+  border: 15px solid;
+  border-color: #ffc249;
+  background-image: linear-gradient(to bottom right, #012244, #430022);
 }
 
 img.modal-img {
   display: block;
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
   height: 200px;
   border: 10px solid;
-  border-color: #FFC249;
+  border-color: #ffc249;
   border-radius: 3px;
-  box-shadow: 2px 5px #111111;
+  box-shadow: 2px 5px #111;
   background-image: url("../img/pokemoncardbackground.jpg");
   background-size: contain;
 }
@@ -30,21 +31,17 @@ img.modal-img {
 }
 
 p {
-  background-color: #FFC249;
+  background-color: #ffc249;
   color: black;
   width: 100px;
   padding: 5px;
   text-align: center;
   border-radius: 10px;
-  display:block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  box-shadow: 2px 5px #111111;
-}
-
-.modal-content {
-  background-image:linear-gradient(to bottom right, #012244, #430022);
+  box-shadow: 2px 5px #111;
 }
 
 span {
@@ -65,7 +62,6 @@ span {
   border: 1px solid black;
   margin: 10px;
 }
-
 
 .btn-secondary {
   background-color: white;
