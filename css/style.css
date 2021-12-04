@@ -6,31 +6,6 @@
   position: relative;
 }
 
-.pokemon-list li::before {
-  content: url('../img/pokemonlistbuttonlogo.svg');
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  top: 10px;
-  margin-right: 10px;
-} */
-
-
-@media (max-width: 1024px) {
-  body {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .modal {
-    width: 90%;
-    max-width: 90%;
-    left: 5%;
-  }
-}
-
 .modal-content {
   border:15px solid;
   border-color: #FFC249;
@@ -51,17 +26,12 @@ img.modal-img {
 
 .modal-title {
   color: white;
-}
-div.modal-header {
-  /* background-image:linear-gradient(to bottom right, #012244, #430022); */
-}
-
-.modal-body {
-  background-color: ;
+  background-color: transparent;
 }
 
 p {
   background-color: #FFC249;
+  color: black;
   width: 100px;
   padding: 5px;
   text-align: center;
@@ -73,19 +43,45 @@ p {
   box-shadow: 2px 5px #111111;
 }
 
-div.modal-footer {
-  /* background-image:linear-gradient(to bottom right, #430022, #012244); */
-}
-
 .modal-content {
   background-image:linear-gradient(to bottom right, #012244, #430022);
 }
 
 span {
   color: white;
+  background-color: transparent;
 }
+
+.button img {
+  display: block;
+  width: 125px;
+  height: 125px;
+}
+
+.button {
+  background-color: transparent;
+  color: black;
+  text-transform: capitalize;
+  border: 1px solid black;
+  margin: 10px;
+}
+
 
 .btn-secondary {
   background-color: white;
   color: black;
+}
+
+@media (max-width: 1024px) {
+  body {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 90%;
+    max-width: 90%;
+    left: 5%;
+  }
 }
